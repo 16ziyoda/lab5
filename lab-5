@@ -1,0 +1,160 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int N, sum = 0;
+    double average;
+
+    cout << "First 10 natural numbers: ";
+    for (int i = 1; i <= 10; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    cout << "Enter a number for N: ";
+    cin >> N;
+    cout << "First " << N << " natural numbers: ";
+    for (int i = 1; i <= N; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    cout << "Sum of first 10 natural numbers: " << sum << endl;
+
+    sum = 0;
+    for (int i = 1; i <= N; i++) {
+        sum += i;
+    }
+    cout << "Sum of first " << N << " natural numbers: " << sum << endl;
+
+    sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    average = sum / 10.0;
+    cout << "Average of first 10 natural numbers: " << average << endl;
+
+    sum = 0;
+    for (int i = 1; i <= N; i++) {
+        sum += i;
+    }
+    average = sum / static_cast<double>(N);
+    cout << "Average of first " << N << " natural numbers: " << average << endl;
+
+    cout << "Odd numbers in first 10 natural numbers: ";
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 != 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Even numbers in first 10 natural numbers: ";
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Enter a number for N: ";
+    cin >> N;
+    cout << "Odd numbers in first " << N << " natural numbers: ";
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 != 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Even numbers in first " << N << " natural numbers: ";
+    for (int i = 1; i <= N; i++) {
+        if (i % 2 == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Numbers from 1 to 100 divisible by 10: ";
+    for (int i = 10; i <= 100; i += 10) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    cout << "Enter a number for N: ";
+    cin >> N;
+    cout << "Numbers from 1 to " << N << " divisible by 10: ";
+    for (int i = 10; i <= N; i += 10) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    int count = 0;
+    for (char ch = 'A'; ch <= 'Z'; ch++) {
+        cout << ch << " ";
+        count++;
+        if (count % 5 == 0) {
+            cout << endl;
+        }
+    }
+    cout << endl;
+
+    long long factorial = 1;    
+    cout << "Enter a number: ";
+    int n2;
+    cin >> n2;
+
+    if (n2 < 0) {
+        cout << "Factorial of a negative number is not defined." << endl;
+    } else {
+        for (int i = 1; i <= n2; ++i) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << n2 << " is " << factorial << endl;
+    }
+
+    cout << "Enter the size of the square: ";
+    cin >> n2;
+    for (int i = 0; i < n2; i++) { 
+        for (int j = 0; j < n2; j++) {  
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    cout << "Enter the number of rows: ";
+    cin >> n2;
+    for (int i = 1; i <= n2; i++) {  
+        for (int j = 1; j <= i; j++) {  
+            cout << "*";
+        }
+        cout << endl; 
+    }
+
+    int n;
+    bool isPrime = true;
+    cout << "Enter a number: ";
+    cin >> n;
+    if (n < 2) {
+        isPrime = false;
+    } else {
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break; 
+            }
+        }
+    }
+    if (isPrime) {
+        cout << "Number is prime" << endl;
+    } else {
+        cout << "Number is not prime" << endl;
+    }
+
+    return 0;
+}
